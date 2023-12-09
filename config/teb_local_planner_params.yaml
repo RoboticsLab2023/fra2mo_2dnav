@@ -26,10 +26,10 @@ TebLocalPlannerROS:
   type: "polygon"
 
 
-  vertices: [[0.2, -0.2], 
-            [-0.2, -0.2], 
-            [-0.2, 0.2], 
-            [0.2, 0.2]]
+  vertices: [[0.15, -0.15], 
+            [-0.15, -0.15], 
+            [-0.15, 0.15], 
+            [0.15, 0.15]]
           
  # GoalTolerance
 
@@ -39,14 +39,14 @@ TebLocalPlannerROS:
     
  # Obstacles
     
- min_obstacle_dist: 0.20
+ min_obstacle_dist: 0.10
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 1.0
  obstacle_poses_affected: 20 
  costmap_converter_plugin: "" 
  costmap_converter_spin_thread: True
  costmap_converter_rate: 5
- inflation_dist: 0.2 
+ inflation_dist: 0.1
  include_dynamic_obstacles: false
 
  # Optimization

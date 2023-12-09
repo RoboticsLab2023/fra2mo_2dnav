@@ -161,6 +161,9 @@ include_directories(
 add_executable(single_goal src/single_goal.cpp)
 target_link_libraries(single_goal ${catkin_LIBRARIES})
 
+add_executable(tf_nav src/tf_nav.cpp)
+target_link_libraries(tf_nav ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
