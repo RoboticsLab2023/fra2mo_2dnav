@@ -18,12 +18,12 @@ void TF_NAV::tf_listener_fun() {
     while ( ros::ok() )
     {
         try {
-            listener.waitForTransform( "map", "base_footprint", ros::Time(0), ros::Duration(5.0) );
+            listener.waitForTransform( "map", "base_footprint", ros::Time(0), ros::Duration(10.0) );
             listener.lookupTransform( "map", "base_footprint", ros::Time(0), transform );
 
         }
         catch( tf::TransformException &ex ) {
-            // ROS_ERROR("%s", ex.what());
+            ROS_ERROR("%s", ex.what());
             r.sleep();
             continue;
         }
@@ -64,12 +64,12 @@ void TF_NAV::goal_listener() {
     {
         try
         {
-            listener.waitForTransform( "map", "goal1", ros::Time( 0 ), ros::Duration( 1.0 ) );
+            listener.waitForTransform( "map", "goal1", ros::Time( 0 ), ros::Duration( 10.0 ) );
             listener.lookupTransform( "map", "goal1", ros::Time( 0 ), transform );
         }
         catch( tf::TransformException &ex )
         {
-            // ROS_ERROR("%s", ex.what());
+            ROS_ERROR("%s", ex.what());
             r.sleep();
             continue;
         }
